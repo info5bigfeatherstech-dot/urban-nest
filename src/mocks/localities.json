@@ -1,0 +1,135 @@
+[
+  {
+    "id": "loc-1",
+    "name": "Golf Course Ext Road",
+    "citySlug": "delhi-ncr",
+    "cityName": "Delhi NCR (Gurugram)",
+    "avgPricePerSqFt": 14200,
+    "priceGrowthPercent": 12.4,
+    "trend": "up",
+    "propertyCount": 2180,
+    "popularFor": "Luxury Condos & Rapid Metro"
+  },
+  {
+    "id": "loc-2",
+    "name": "Dwarka Expressway",
+    "citySlug": "delhi-ncr",
+    "cityName": "Delhi NCR (Gurugram)",
+    "avgPricePerSqFt": 11800,
+    "priceGrowthPercent": 16.8,
+    "trend": "up",
+    "propertyCount": 3450,
+    "popularFor": "Airport Link & High ROI"
+  },
+  {
+    "id": "loc-3",
+    "name": "Sector 150",
+    "citySlug": "delhi-ncr",
+    "cityName": "Delhi NCR (Noida)",
+    "avgPricePerSqFt": 8900,
+    "priceGrowthPercent": 9.1,
+    "trend": "up",
+    "propertyCount": 1840,
+    "popularFor": "Sports City & 80% Greenery"
+  },
+  {
+    "id": "loc-4",
+    "name": "Bandra West",
+    "citySlug": "mumbai",
+    "cityName": "Mumbai",
+    "avgPricePerSqFt": 54000,
+    "priceGrowthPercent": 7.2,
+    "trend": "up",
+    "propertyCount": 980,
+    "popularFor": "Celebrity Enclaves & Sea Face"
+  },
+  {
+    "id": "loc-5",
+    "name": "Thane West",
+    "citySlug": "mumbai",
+    "cityName": "Mumbai MMR",
+    "avgPricePerSqFt": 15400,
+    "priceGrowthPercent": 8.6,
+    "trend": "up",
+    "propertyCount": 4200,
+    "popularFor": "Self-sustained Townships & Metro"
+  },
+  {
+    "id": "loc-6",
+    "name": "Whitefield",
+    "citySlug": "bengaluru",
+    "cityName": "Bengaluru",
+    "avgPricePerSqFt": 9600,
+    "priceGrowthPercent": 14.5,
+    "trend": "up",
+    "propertyCount": 4900,
+    "popularFor": "ITPB, Purple Metro & International Schools"
+  },
+  {
+    "id": "loc-7",
+    "name": "Sarjapur Road",
+    "citySlug": "bengaluru",
+    "cityName": "Bengaluru",
+    "avgPricePerSqFt": 8800,
+    "priceGrowthPercent": 11.2,
+    "trend": "up",
+    "propertyCount": 3820,
+    "popularFor": "ORR Connectivity & Gated Communities"
+  },
+  {
+    "id": "loc-8",
+    "name": "Hinjawadi",
+    "citySlug": "pune",
+    "cityName": "Pune",
+    "avgPricePerSqFt": 7200,
+    "priceGrowthPercent": 10.3,
+    "trend": "up",
+    "propertyCount": 3100,
+    "popularFor": "Rajiv Gandhi Infotech Park"
+  },
+  {
+    "id": "loc-9",
+    "name": "Wakad",
+    "citySlug": "pune",
+    "cityName": "Pune",
+    "avgPricePerSqFt": 7900,
+    "priceGrowthPercent": 8.4,
+    "trend": "up",
+    "propertyCount": 2740,
+    "popularFor": "Mumbai-Pune Expressway proximity"
+  },
+  {
+    "id": "loc-10",
+    "name": "Kokapet",
+    "citySlug": "hyderabad",
+    "cityName": "Hyderabad",
+    "avgPricePerSqFt": 11200,
+    "priceGrowthPercent": 18.2,
+    "trend": "up",
+    "propertyCount": 2650,
+    "popularFor": "Neopolis SEZ & Golden Mile"
+  },
+  {
+    "id": "loc-11",
+    "name": "Gachibowli",
+    "citySlug": "hyderabad",
+    "cityName": "Hyderabad",
+    "avgPricePerSqFt": 10400,
+    "priceGrowthPercent": 13.0,
+    "trend": "up",
+    "propertyCount": 3310,
+    "popularFor": "Financial District & Outer Ring Road"
+  },
+  {
+    "id": "loc-12",
+    "name": "OMR (Old Mahabalipuram Rd)",
+    "citySlug": "chennai",
+    "cityName": "Chennai",
+    "avgPricePerSqFt": 6800,
+    "priceGrowthPercent": 6.8,
+    "trend": "up",
+    "propertyCount": 2400,
+    "popularFor": "IT Corridor & Tidel Park"
+  }
+]
+

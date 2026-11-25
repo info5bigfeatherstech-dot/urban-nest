@@ -1,0 +1,75 @@
+[
+  {
+    "id": "b-dlf",
+    "name": "DLF Limited",
+    "shortName": "DLF",
+    "logo": "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?w=120&auto=format&fit=crop&q=80",
+    "projectsCount": 140,
+    "experienceYears": 75,
+    "cityPresence": ["Delhi NCR", "Chennai", "Kolkata"]
+  },
+  {
+    "id": "b-godrej",
+    "name": "Godrej Properties",
+    "shortName": "Godrej",
+    "logo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=120&auto=format&fit=crop&q=80",
+    "projectsCount": 95,
+    "experienceYears": 34,
+    "cityPresence": ["Mumbai", "Delhi NCR", "Bengaluru", "Pune"]
+  },
+  {
+    "id": "b-prestige",
+    "name": "Prestige Group",
+    "shortName": "Prestige",
+    "logo": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=120&auto=format&fit=crop&q=80",
+    "projectsCount": 210,
+    "experienceYears": 38,
+    "cityPresence": ["Bengaluru", "Hyderabad", "Mumbai", "Chennai"]
+  },
+  {
+    "id": "b-lodha",
+    "name": "Lodha (Macrotech)",
+    "shortName": "Lodha",
+    "logo": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=120&auto=format&fit=crop&q=80",
+    "projectsCount": 180,
+    "experienceYears": 44,
+    "cityPresence": ["Mumbai", "Pune", "Bengaluru"]
+  },
+  {
+    "id": "b-sobha",
+    "name": "Sobha Limited",
+    "shortName": "Sobha",
+    "logo": "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?w=120&auto=format&fit=crop&q=80",
+    "projectsCount": 125,
+    "experienceYears": 29,
+    "cityPresence": ["Bengaluru", "Delhi NCR", "Pune", "Chennai"]
+  },
+  {
+    "id": "b-brigade",
+    "name": "Brigade Group",
+    "shortName": "Brigade",
+    "logo": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=120&auto=format&fit=crop&q=80",
+    "projectsCount": 110,
+    "experienceYears": 37,
+    "cityPresence": ["Bengaluru", "Hyderabad", "Chennai"]
+  },
+  {
+    "id": "b-oberoi",
+    "name": "Oberoi Realty",
+    "shortName": "Oberoi",
+    "logo": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=120&auto=format&fit=crop&q=80",
+    "projectsCount": 70,
+    "experienceYears": 40,
+    "cityPresence": ["Mumbai", "Thane", "Delhi NCR"]
+  },
+  {
+    "id": "b-hiranandani",
+    "name": "Hiranandani Communities",
+    "shortName": "Hiranandani",
+    "logo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=120&auto=format&fit=crop&q=80",
+    "projectsCount": 85,
+    "experienceYears": 45,
+    "cityPresence": ["Mumbai", "Chennai", "Ahmedabad"]
+  }
+]
+

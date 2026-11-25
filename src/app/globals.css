@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #0F172A;
+
+    /* Primary Royal / Sapphire Blue (Not Green) */
+    --primary: #0066CC;
+    --primary-hover: #0052A3;
+    --primary-foreground: #FFFFFF;
+
+    /* Accent Warm Amber / Gold */
+    --accent: #F59E0B;
+    --accent-hover: #D97706;
+    --accent-foreground: #FFFFFF;
+
+    /* Soft Ice Blue / Cloud Tint */
+    --tint: #F1F5F9;
+    --tint-foreground: #0F172A;
+
+    /* Midnight Navy Dark */
+    --dark: #0A192F;
+    --dark-foreground: #FFFFFF;
+
+    /* Typography & Structural */
+    --ink: #0F172A;
+    --muted: #64748B;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #0066CC;
+
+    /* Status */
+    --success: #16A34A;
+    --danger: #DC2626;
+
+    /* Card & Popover */
+    --card: #FFFFFF;
+    --card-foreground: #0F172A;
+    --popover: #FFFFFF;
+    --popover-foreground: #0F172A;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-ink font-body antialiased;
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+/* Snappy compositor-friendly dropdown animation */
+@keyframes dropdownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .subtle-hover {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease;
+  }
+  .subtle-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  .smooth-dropdown {
+    animation: dropdownFadeIn 0.12s ease-out forwards;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom slim scrollbar for dropdown menus */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}

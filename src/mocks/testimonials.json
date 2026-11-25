@@ -1,0 +1,43 @@
+[
+  {
+    "id": "t-1",
+    "author": "Rohan & Sneha Kapoor",
+    "role": "Bought 3 BHK in Gurugram",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&auto=format&fit=crop&q=80",
+    "quote": "UrbanNest made the entire discovery experience transparent. No hidden broker fees, direct developer contact, and the RERA verification gave us 100% peace of mind.",
+    "rating": 5,
+    "location": "Sector 65, Gurugram",
+    "verifiedBadge": true
+  },
+  {
+    "id": "t-2",
+    "author": "Dr. Arvind Subramaniam",
+    "role": "Purchased Villa in Bengaluru",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&auto=format&fit=crop&q=80",
+    "quote": "The locality pricing analytics and true carpet area breakdowns helped me compare 4 different gated communities in Whitefield effortlessly. Unmatched quality of data.",
+    "rating": 5,
+    "location": "Whitefield, Bengaluru",
+    "verifiedBadge": true
+  },
+  {
+    "id": "t-3",
+    "author": "Meera Kulkarni",
+    "role": "Sold Penthouse in Mumbai",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=160&auto=format&fit=crop&q=80",
+    "quote": "Listing on UrbanNest was seamless and free. Within 48 hours, I had 6 genuine buyer inquiries and concluded the sale without unwanted telemarketing spam.",
+    "rating": 5,
+    "location": "Bandra West, Mumbai",
+    "verifiedBadge": true
+  },
+  {
+    "id": "t-4",
+    "author": "Karthik & Ananya Reddy",
+    "role": "Bought 2.5 BHK in Hyderabad",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&auto=format&fit=crop&q=80",
+    "quote": "The interactive search filters and verified owner listings saved us months of weekend site visits. We found our dream home close to Financial District in just 2 weeks.",
+    "rating": 5,
+    "location": "Gachibowli, Hyderabad",
+    "verifiedBadge": true
+  }
+]
+

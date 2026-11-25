@@ -1,0 +1,83 @@
+[
+  {
+    "id": "city-delhi-ncr",
+    "name": "Delhi NCR",
+    "slug": "delhi-ncr",
+    "state": "National Capital Region",
+    "propertyCount": 24500,
+    "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600&auto=format&fit=crop&q=80",
+    "isPopular": true,
+    "popularLocalities": ["Golf Course Ext", "Sohna Road", "Sector 150 Noida", "Dwarka Expressway"]
+  },
+  {
+    "id": "city-mumbai",
+    "name": "Mumbai",
+    "slug": "mumbai",
+    "state": "Maharashtra",
+    "propertyCount": 28900,
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=600&auto=format&fit=crop&q=80",
+    "isPopular": true,
+    "popularLocalities": ["Bandra West", "Andheri West", "Thane West", "Powai", "Worli"]
+  },
+  {
+    "id": "city-bengaluru",
+    "name": "Bengaluru",
+    "slug": "bengaluru",
+    "state": "Karnataka",
+    "propertyCount": 26400,
+    "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600&auto=format&fit=crop&q=80",
+    "isPopular": true,
+    "popularLocalities": ["Whitefield", "Sarjapur Road", "Hebbal", "Bellandur", "Indiranagar"]
+  },
+  {
+    "id": "city-pune",
+    "name": "Pune",
+    "slug": "pune",
+    "state": "Maharashtra",
+    "propertyCount": 18200,
+    "image": "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=600&auto=format&fit=crop&q=80",
+    "isPopular": true,
+    "popularLocalities": ["Hinjawadi", "Wakad", "Baner", "Kharadi", "Viman Nagar"]
+  },
+  {
+    "id": "city-hyderabad",
+    "name": "Hyderabad",
+    "slug": "hyderabad",
+    "state": "Telangana",
+    "propertyCount": 19800,
+    "image": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=600&auto=format&fit=crop&q=80",
+    "isPopular": true,
+    "popularLocalities": ["Gachibowli", "Madhapur", "Kondapur", "Kokapet", "Tellapur"]
+  },
+  {
+    "id": "city-chennai",
+    "name": "Chennai",
+    "slug": "chennai",
+    "state": "Tamil Nadu",
+    "propertyCount": 14100,
+    "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&auto=format&fit=crop&q=80",
+    "isPopular": true,
+    "popularLocalities": ["OMR", "ECR", "Velachery", "Anna Nagar", "Sholinganallur"]
+  },
+  {
+    "id": "city-kolkata",
+    "name": "Kolkata",
+    "slug": "kolkata",
+    "state": "West Bengal",
+    "propertyCount": 11300,
+    "image": "https://images.unsplash.com/photo-1558431382-27e303142255?w=600&auto=format&fit=crop&q=80",
+    "isPopular": true,
+    "popularLocalities": ["New Town", "Salt Lake", "Rajarhat", "EM Bypass", "Ballygunge"]
+  },
+  {
+    "id": "city-ahmedabad",
+    "name": "Ahmedabad",
+    "slug": "ahmedabad",
+    "state": "Gujarat",
+    "propertyCount": 9700,
+    "image": "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?w=600&auto=format&fit=crop&q=80",
+    "isPopular": true,
+    "popularLocalities": ["SG Highway", "Bopal", "Satellite", "Gota", "Shela"]
+  }
+]
+

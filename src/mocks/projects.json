@@ -1,0 +1,219 @@
+[
+  {
+    "id": "proj-1",
+    "name": "The Camellias Reserve",
+    "builder": {
+      "id": "b-1",
+      "name": "DLF Luxury",
+      "logo": "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?w=100&auto=format&fit=crop&q=80",
+      "experienceYears": 75,
+      "totalProjects": 140
+    },
+    "locality": "Golf Course Road",
+    "city": "Gurugram, Delhi NCR",
+    "state": "Haryana",
+    "bhkConfigs": ["3 BHK", "4 BHK", "5 BHK"],
+    "minPrice": 38000000,
+    "maxPrice": 85000000,
+    "possessionDate": "Dec 2026",
+    "reraId": "HRERA-PKL-GGM-1482-2023",
+    "isReraApproved": true,
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&auto=format&fit=crop&q=80"
+    ],
+    "bannerBadge": "New Phase Launch",
+    "totalUnits": 320,
+    "openAreaPercent": 82
+  },
+  {
+    "id": "proj-2",
+    "name": "Godrej Woodsman Serenity",
+    "builder": {
+      "id": "b-2",
+      "name": "Godrej Properties",
+      "logo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&auto=format&fit=crop&q=80",
+      "experienceYears": 34,
+      "totalProjects": 95
+    },
+    "locality": "Sector 43, Noida",
+    "city": "Noida, Delhi NCR",
+    "state": "Uttar Pradesh",
+    "bhkConfigs": ["2 BHK", "3 BHK", "4 BHK"],
+    "minPrice": 16500000,
+    "maxPrice": 36000000,
+    "possessionDate": "Jun 2027",
+    "reraId": "UPRERAPRJ77192",
+    "isReraApproved": true,
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&auto=format&fit=crop&q=80"
+    ],
+    "bannerBadge": "Urban Forest Concept",
+    "totalUnits": 480,
+    "openAreaPercent": 78
+  },
+  {
+    "id": "proj-3",
+    "name": "Prestige Falcon City Luxe",
+    "builder": {
+      "id": "b-3",
+      "name": "Prestige Group",
+      "logo": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=100&auto=format&fit=crop&q=80",
+      "experienceYears": 38,
+      "totalProjects": 210
+    },
+    "locality": "Kanakapura Road",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "bhkConfigs": ["2 BHK", "3 BHK"],
+    "minPrice": 11500000,
+    "maxPrice": 21000000,
+    "possessionDate": "Mar 2026",
+    "reraId": "PRM/KA/RERA/1251/310/PR/180516",
+    "isReraApproved": true,
+    "images": [
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=900&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=900&auto=format&fit=crop&q=80"
+    ],
+    "bannerBadge": "Near Metro Station",
+    "totalUnits": 550,
+    "openAreaPercent": 75
+  },
+  {
+    "id": "proj-4",
+    "name": "Lodha World One Residences",
+    "builder": {
+      "id": "b-4",
+      "name": "Lodha Group (Macrotech)",
+      "logo": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=100&auto=format&fit=crop&q=80",
+      "experienceYears": 44,
+      "totalProjects": 180
+    },
+    "locality": "Lower Parel",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "bhkConfigs": ["3 BHK", "4 BHK", "5 BHK"],
+    "minPrice": 62000000,
+    "maxPrice": 145000000,
+    "possessionDate": "Oct 2026",
+    "reraId": "P51900008345",
+    "isReraApproved": true,
+    "images": [
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=900&auto=format&fit=crop&q=80"
+    ],
+    "bannerBadge": "Iconic Sea View",
+    "totalUnits": 190,
+    "openAreaPercent": 65
+  },
+  {
+    "id": "proj-5",
+    "name": "Sobha Neopolis Greek Living",
+    "builder": {
+      "id": "b-5",
+      "name": "Sobha Limited",
+      "logo": "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?w=100&auto=format&fit=crop&q=80",
+      "experienceYears": 29,
+      "totalProjects": 125
+    },
+    "locality": "Panathur, Marathahalli",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "bhkConfigs": ["1 BHK", "2 BHK", "3 BHK", "4 BHK"],
+    "minPrice": 9200000,
+    "maxPrice": 28500000,
+    "possessionDate": "Dec 2027",
+    "reraId": "PRM/KA/RERA/1251/446/PR/200923",
+    "isReraApproved": true,
+    "images": [
+      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=900&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&auto=format&fit=crop&q=80"
+    ],
+    "bannerBadge": "Greek Architecture",
+    "totalUnits": 620,
+    "openAreaPercent": 80
+  },
+  {
+    "id": "proj-6",
+    "name": "Oberoi Forest Greens",
+    "builder": {
+      "id": "b-6",
+      "name": "Oberoi Realty",
+      "logo": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=100&auto=format&fit=crop&q=80",
+      "experienceYears": 40,
+      "totalProjects": 70
+    },
+    "locality": "Pokhran Road No. 2",
+    "city": "Thane, Mumbai MMR",
+    "state": "Maharashtra",
+    "bhkConfigs": ["2 BHK", "3 BHK"],
+    "minPrice": 18500000,
+    "maxPrice": 34000000,
+    "possessionDate": "Jan 2027",
+    "reraId": "P51700031899",
+    "isReraApproved": true,
+    "images": [
+      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=900&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&auto=format&fit=crop&q=80"
+    ],
+    "bannerBadge": "Near Yeoor Hills",
+    "totalUnits": 380,
+    "openAreaPercent": 76
+  },
+  {
+    "id": "proj-7",
+    "name": "Aparna Zenon Financial Park",
+    "builder": {
+      "id": "b-7",
+      "name": "Aparna Constructions",
+      "logo": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=100&auto=format&fit=crop&q=80",
+      "experienceYears": 28,
+      "totalProjects": 65
+    },
+    "locality": "Nanakramguda, Financial District",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "bhkConfigs": ["2 BHK", "3 BHK"],
+    "minPrice": 13200000,
+    "maxPrice": 24000000,
+    "possessionDate": "Nov 2026",
+    "reraId": "P02400003722",
+    "isReraApproved": true,
+    "images": [
+      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=900&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&auto=format&fit=crop&q=80"
+    ],
+    "bannerBadge": "Walk to Work",
+    "totalUnits": 720,
+    "openAreaPercent": 84
+  },
+  {
+    "id": "proj-8",
+    "name": "Kolte Patil Life Republic Universe",
+    "builder": {
+      "id": "b-8",
+      "name": "Kolte Patil Developers",
+      "logo": "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?w=100&auto=format&fit=crop&q=80",
+      "experienceYears": 32,
+      "totalProjects": 85
+    },
+    "locality": "Hinjawadi",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "bhkConfigs": ["1 BHK", "2 BHK", "3 BHK"],
+    "minPrice": 4800000,
+    "maxPrice": 11500000,
+    "possessionDate": "Aug 2026",
+    "reraId": "P52100027629",
+    "isReraApproved": true,
+    "images": [
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=900&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=900&auto=format&fit=crop&q=80"
+    ],
+    "bannerBadge": "400-Acre Township",
+    "totalUnits": 850,
+    "openAreaPercent": 70
+  }
+]
+

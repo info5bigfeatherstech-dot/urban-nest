@@ -1,0 +1,35 @@
+[
+  {
+    "id": "stat-1",
+    "label": "Verified Properties",
+    "targetNumber": 120,
+    "suffix": "K+",
+    "description": "Thoroughly inspected on-ground with authenticated title checks",
+    "iconName": "ShieldCheck"
+  },
+  {
+    "id": "stat-2",
+    "label": "Zero-Brokerage Listings",
+    "targetNumber": 45,
+    "suffix": "K+",
+    "description": "Direct owner-to-buyer transactions saving lakhs in commission",
+    "iconName": "BadgePercent"
+  },
+  {
+    "id": "stat-3",
+    "label": "RERA-Checked Projects",
+    "targetNumber": 100,
+    "suffix": "%",
+    "description": "Strict compliance with state RERA registration numbers & timelines",
+    "iconName": "FileCheck2"
+  },
+  {
+    "id": "stat-4",
+    "label": "Expert Advisory Support",
+    "targetNumber": 24,
+    "suffix": "/7",
+    "description": "Dedicated relationship managers guiding your home buying journey",
+    "iconName": "Headphones"
+  }
+]
+
