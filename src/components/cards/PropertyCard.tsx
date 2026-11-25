@@ -3,13 +3,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Heart, MapPin, CheckCircle, Phone, BedDouble, Bath, Maximize2, ArrowUpRight } from "lucide-react";
+import { MapPin, CheckCircle, Phone, BedDouble, Bath, Maximize2, ArrowUpRight } from "lucide-react";
 import { Property } from "@/types/property";
 import { formatArea } from "@/lib/format";
 import { PriceTag } from "@/components/common/PriceTag";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { useWishlistStore } from "@/store/useWishlistStore";
 import { useUiStore } from "@/store/useUiStore";
 import { cn } from "@/lib/utils";
 
@@ -20,9 +19,7 @@ interface PropertyCardProps {
 
 export function PropertyCard({ property, className }: PropertyCardProps) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const { isInWishlist, toggleWishlist } = useWishlistStore();
   const { openContactModal } = useUiStore();
-  const wishlisted = isInWishlist(property.id);
 
   const images = property.images && property.images.length > 0
     ? property.images
@@ -67,24 +64,6 @@ export function PropertyCard({ property, className }: PropertyCardProps) {
             By {property.postedBy}
           </Badge>
         </div>
-
-        {/* Shortlist Heart Button */}
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            toggleWishlist(property.id);
-          }}
-          aria-label={wishlisted ? "Remove from shortlist" : "Add to shortlist"}
-          className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-ink shadow-md transition-transform hover:scale-110 active:scale-95 z-20"
-        >
-          <Heart
-            className={cn(
-              "h-4 w-4 transition-colors",
-              wishlisted ? "fill-danger text-danger" : "text-ink/70 hover:text-danger"
-            )}
-          />
-        </button>
 
         {/* Photo Gallery Dots */}
         {images.length > 1 && (
@@ -154,16 +133,6 @@ export function PropertyCard({ property, className }: PropertyCardProps) {
         <div className="mt-auto pt-3 border-t border-border flex items-center justify-between gap-2">
           <Button
             size="sm"
-            variant={wishlisted ? "secondary" : "outline"}
-            onClick={() => toggleWishlist(property.id)}
-            className="flex-1 text-xs h-9 gap-1.5 border-border"
-          >
-            <Heart className={cn("h-3.5 w-3.5", wishlisted && "fill-danger text-danger")} />
-            <span>{wishlisted ? "Shortlisted" : "Shortlist"}</span>
-          </Button>
-
-          <Button
-            size="sm"
             variant="default"
             onClick={() =>
               openContactModal({
@@ -172,7 +141,7 @@ export function PropertyCard({ property, className }: PropertyCardProps) {
                 builderName: property.posterName,
               })
             }
-            className="flex-1 text-xs h-9 gap-1.5 bg-primary hover:bg-primary-hover text-white"
+            className="w-full text-xs h-9 gap-1.5 bg-primary hover:bg-primary-hover text-white"
           >
             <Phone className="h-3.5 w-3.5" />
             <span>Contact</span>

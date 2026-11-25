@@ -65,16 +65,16 @@ export function SearchCard() {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto rounded-3xl bg-white p-5 sm:p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] border border-slate-200/90 relative z-30">
+    <div className="w-full max-w-5xl mx-auto rounded-2xl sm:rounded-3xl bg-white p-4 sm:p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] border border-slate-200/90 relative z-30">
       {/* Category Tabs */}
       <SearchTabs />
 
       {/* Main Search Controls Form */}
       <form onSubmit={handleSearchSubmit} className="pt-4 space-y-4">
         {/* Row 1: City, Locality, Property Type, Budget */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3.5">
           {/* Smooth City Dropdown */}
-          <div className="flex flex-col gap-1.5">
+          <div className="flex flex-col gap-1.5 lg:col-span-2">
             <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
               City
             </label>
@@ -92,7 +92,7 @@ export function SearchCard() {
           <LocalityAutocomplete />
 
           {/* Smooth Property Type Dropdown */}
-          <div className="flex flex-col gap-1.5">
+          <div className="flex flex-col gap-1.5 lg:col-span-3">
             <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
               Property Type
             </label>

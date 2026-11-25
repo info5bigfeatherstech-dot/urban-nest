@@ -4,13 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { BrandLogo } from "@/components/common/BrandLogo";
-import { Button } from "@/components/ui/button";
 import { CitySelector } from "./CitySelector";
 import { MobileNav } from "./MobileNav";
-import { AuthDialog } from "./AuthDialog";
 import { ContactModal } from "./ContactModal";
 import { MegaMenu, MegaMenuCategory } from "./MegaMenu";
-import { useUiStore } from "@/store/useUiStore";
 import { cn } from "@/lib/utils";
 
 interface NavCategoryLink {
@@ -31,8 +28,6 @@ export function Navbar() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<MegaMenuCategory | null>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const navContainerRef = useRef<HTMLDivElement>(null);
-
-  const { setAuthModalOpen } = useUiStore();
 
   // Scroll listener for sticky shadow
   useEffect(() => {
@@ -91,8 +86,8 @@ export function Navbar() {
             <BrandLogo />
           </div>
 
-          {/* Center Links (Desktop - 1200px+) */}
-          <nav className="hidden xl:flex items-center gap-1 2xl:gap-2 shrink-0">
+          {/* Center Links (Desktop - 768px+) */}
+          <nav className="hidden md:flex items-center gap-1 2xl:gap-2 shrink-0">
             {NAV_ITEMS.map((item) => {
               const isOpen = activeMegaMenu === item.id;
               return (
@@ -132,22 +127,12 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Right Action Buttons (City Selector + Login) - NO Wishlist */}
+          {/* Right Action Buttons (City Selector) */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {/* City Selector */}
             <div className="hidden sm:block shrink-0">
               <CitySelector />
             </div>
-
-            {/* Login / Sign up Button */}
-            <Button
-              variant="default"
-              size="sm"
-              onClick={() => setAuthModalOpen(true, "login")}
-              className="hidden sm:inline-flex font-bold text-xs h-9 px-4 shrink-0 whitespace-nowrap bg-primary hover:bg-primary-hover text-white shadow-sm rounded-lg"
-            >
-              Login / Sign Up
-            </Button>
 
             {/* Mobile Hamburger Drawer */}
             <MobileNav />
@@ -175,7 +160,6 @@ export function Navbar() {
       </header>
 
       {/* Global Modals */}
-      <AuthDialog />
       <ContactModal />
     </>
   );

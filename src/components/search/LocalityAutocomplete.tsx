@@ -76,7 +76,7 @@ export function LocalityAutocomplete() {
   }, [displayPool, searchQuery]);
 
   return (
-    <div ref={containerRef} className="relative flex flex-col gap-1.5 flex-1 min-w-[210px]">
+    <div ref={containerRef} className="relative flex flex-col gap-1.5 flex-1 min-w-0 lg:col-span-3">
       <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
         Locality / Landmark
       </label>
@@ -85,7 +85,7 @@ export function LocalityAutocomplete() {
       <div
         onClick={() => setOpen(true)}
         className={cn(
-          "flex flex-wrap items-center gap-1.5 min-h-[48px] h-12 rounded-xl border bg-slate-50 px-3 py-1.5 transition-colors cursor-pointer overflow-hidden",
+          "flex flex-wrap items-center gap-1.5 min-h-[48px] rounded-xl border bg-slate-50 px-3 py-1.5 transition-colors cursor-pointer",
           open
             ? "bg-white border-primary ring-2 ring-primary/20"
             : "border-slate-200 hover:bg-white hover:border-slate-300"
@@ -133,7 +133,7 @@ export function LocalityAutocomplete() {
       {open && (
         <div
           style={{ backgroundColor: "#ffffff" }}
-          className="smooth-dropdown absolute left-0 right-0 top-full mt-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-lg z-50 min-w-[300px]"
+          className="smooth-dropdown absolute left-0 right-0 top-full mt-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-lg z-50 w-full sm:min-w-[300px]"
         >
           {/* Search bar inside dropdown */}
           <div className="relative mb-2.5">

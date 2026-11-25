@@ -32,7 +32,7 @@ export function HeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-[clamp(1.75rem,5vw,3.75rem)] font-heading font-extrabold text-white tracking-tight leading-[1.15]">
             Find a home that <br className="hidden sm:inline" />
             <span className="text-accent underline decoration-accent/40 decoration-wavy underline-offset-8">
               feels like yours.

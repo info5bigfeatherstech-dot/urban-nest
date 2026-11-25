@@ -17,13 +17,11 @@ import {
   MAIN_NAV_LINKS,
   RESIDENTIAL_DROPDOWN_ITEMS,
 } from "@/constants/navigation";
-import { useUiStore } from "@/store/useUiStore";
 import { CitySelector } from "./CitySelector";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
   const [residentialExpanded, setResidentialExpanded] = useState(false);
-  const { setAuthModalOpen } = useUiStore();
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -31,7 +29,7 @@ export function MobileNav() {
         <Button
           variant="ghost"
           size="icon-sm"
-          className="xl:hidden text-ink hover:bg-tint shrink-0"
+          className="md:hidden text-ink hover:bg-tint shrink-0"
           aria-label="Open mobile navigation menu"
         >
           <Menu className="h-6 w-6" />
@@ -40,7 +38,7 @@ export function MobileNav() {
 
       <SheetContent
         side="left"
-        className="w-[300px] sm:w-[360px] p-0 flex flex-col justify-between"
+        className="w-[min(85vw,340px)] p-0 flex flex-col justify-between"
       >
         <div className="overflow-y-auto p-6 space-y-6">
           <SheetHeader className="text-left border-b border-border pb-4">
@@ -111,22 +109,11 @@ export function MobileNav() {
         </div>
 
         {/* Bottom Drawer Actions */}
-        <div className="p-6 border-t border-border bg-tint/30 space-y-3">
+        <div className="p-6 border-t border-border bg-tint/30">
           <div className="flex items-center gap-2 text-xs text-slate-600 px-1 font-medium">
             <PhoneCall className="h-3.5 w-3.5 text-primary" />
             <span>Toll-Free: 1800-420-6378</span>
           </div>
-
-          <Button
-            variant="default"
-            className="w-full font-semibold bg-primary hover:bg-primary-hover text-white"
-            onClick={() => {
-              setOpen(false);
-              setAuthModalOpen(true, "login");
-            }}
-          >
-            Login / Sign Up
-          </Button>
         </div>
       </SheetContent>
     </Sheet>

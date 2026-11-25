@@ -85,7 +85,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
-                <div className="absolute left-5 bottom-5 text-white">
+                <div className="absolute left-4 right-4 bottom-4 sm:left-5 sm:right-5 sm:bottom-5 text-white">
                   <div className="flex items-center gap-2 mb-2">
                     <Badge variant="accent" className="bg-[#FEF3C7] text-[#92400E] font-bold text-xs uppercase">
                       {project.bannerBadge || "NEW ARRIVAL"}

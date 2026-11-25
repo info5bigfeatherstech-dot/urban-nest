@@ -155,7 +155,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} UrbanNest Realty Private Limited. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <Link href="#" className="hover:text-white transition-colors">
               Terms of Use
             </Link>

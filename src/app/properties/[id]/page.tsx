@@ -28,14 +28,12 @@ import {
   Trees,
   ShieldAlert,
   ArrowRight,
-  Heart,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { PriceTag } from "@/components/common/PriceTag";
 import { formatArea } from "@/lib/format";
 import { useUiStore } from "@/store/useUiStore";
-import { useWishlistStore } from "@/store/useWishlistStore";
 import { PropertyFloorPlansAndPricing } from "@/components/property/PropertyFloorPlansAndPricing";
 import { PropertyCard } from "@/components/cards/PropertyCard";
 import mockProperties from "@/mocks/properties.json";
@@ -48,7 +46,6 @@ interface PropertyDetailPageProps {
 export default function PropertyDetailPage({ params }: PropertyDetailPageProps) {
   const resolvedParams = use(params);
   const { openContactModal } = useUiStore();
-  const { isInWishlist, toggleWishlist } = useWishlistStore();
 
   const property = mockProperties.find((p) => p.id === resolvedParams.id);
 
@@ -59,7 +56,6 @@ export default function PropertyDetailPage({ params }: PropertyDetailPageProps) 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [showPhotoLightbox, setShowPhotoLightbox] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
-  const wishlisted = isInWishlist(property.id);
 
   const images = property.images && property.images.length > 0
     ? property.images
@@ -81,9 +77,9 @@ export default function PropertyDetailPage({ params }: PropertyDetailPageProps) 
   return (
     <div className="min-h-screen bg-slate-50/60 pb-24">
       {/* Top Breadcrumb & Actions Bar */}
-      <div className="bg-white border-b border-slate-200/80 py-3.5 sticky top-16 z-30 shadow-2xs">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs text-slate-500 overflow-hidden">
+      <div className="bg-white border-b border-slate-200/80 py-3 sm:py-3.5 sticky top-16 sm:top-[68px] z-30 shadow-2xs">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-2 text-xs text-slate-500 min-w-0 overflow-hidden">
             <Link href="/" className="hover:text-primary transition-colors shrink-0">
               Home
             </Link>
@@ -108,18 +104,6 @@ export default function PropertyDetailPage({ params }: PropertyDetailPageProps) 
             >
               <Share2 className="h-3.5 w-3.5 text-slate-500" />
               <span>{copiedLink ? "Copied!" : "Share"}</span>
-            </Button>
-
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => toggleWishlist(property.id)}
-              className="h-8 text-xs font-semibold gap-1.5 border-slate-200 text-slate-700 hover:bg-slate-50"
-            >
-              <Heart
-                className={cn("h-3.5 w-3.5", wishlisted ? "fill-danger text-danger" : "text-slate-500")}
-              />
-              <span className="hidden sm:inline">{wishlisted ? "Shortlisted" : "Shortlist"}</span>
             </Button>
 
             <Link

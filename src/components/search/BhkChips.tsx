@@ -14,7 +14,7 @@ export function BhkChips() {
   }
 
   return (
-    <div className="flex flex-col gap-1.5 min-w-[200px] flex-1">
+    <div className="flex flex-col gap-1.5 min-w-0 flex-1">
       <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
         Bedroom (BHK)
       </label>

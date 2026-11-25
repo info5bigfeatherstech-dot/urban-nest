@@ -20,7 +20,7 @@ export function BudgetSelect() {
   const maxOptions = isRent ? RENT_BUDGET_MAX_OPTIONS : BUY_BUDGET_MAX_OPTIONS;
 
   return (
-    <div className="flex flex-col gap-1.5 min-w-[210px] flex-1">
+    <div className="flex flex-col gap-1.5 min-w-0 flex-1 lg:col-span-4">
       <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
         Budget {isRent ? "(Per Month)" : "(Total Price)"}
       </label>
@@ -44,6 +44,7 @@ export function BudgetSelect() {
           options={maxOptions}
           value={budget.max}
           placeholder="Max Budget"
+          align="right"
           onChange={(val) =>
             setBudget({
               ...budget,

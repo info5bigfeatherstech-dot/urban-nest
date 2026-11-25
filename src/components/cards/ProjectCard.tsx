@@ -3,12 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Heart, MapPin, Tag, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { MapPin, Tag, CheckCircle2, ArrowUpRight } from "lucide-react";
 import { Project } from "@/types/project";
 import { formatPriceRange } from "@/lib/format";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { useWishlistStore } from "@/store/useWishlistStore";
 import { useUiStore } from "@/store/useUiStore";
 import { cn } from "@/lib/utils";
 
@@ -18,9 +17,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, className }: ProjectCardProps) {
-  const { isInWishlist, toggleWishlist } = useWishlistStore();
   const { openContactModal } = useUiStore();
-  const wishlisted = isInWishlist(project.id);
 
   return (
     <div
@@ -52,24 +49,6 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             </Badge>
           )}
         </div>
-
-        {/* Wishlist Heart Button */}
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            toggleWishlist(project.id);
-          }}
-          aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
-          className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-ink shadow-md transition-transform hover:scale-110 active:scale-95"
-        >
-          <Heart
-            className={cn(
-              "h-4 w-4 transition-colors",
-              wishlisted ? "fill-danger text-danger" : "text-ink/70 hover:text-danger"
-            )}
-          />
-        </button>
 
         {/* Price on Banner overlay */}
         <div className="absolute bottom-3 left-3 text-white">

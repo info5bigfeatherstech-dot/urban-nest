@@ -180,8 +180,8 @@ export default function HomeLoansPage() {
                 Top Bank Interest Rate Comparison
               </h2>
 
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs sm:text-sm">
+              <div className="overflow-x-auto -mx-2 px-2">
+                <table className="w-full min-w-[540px] text-left text-xs sm:text-sm">
                   <thead>
                     <tr className="border-b border-slate-200 text-slate-500 uppercase text-[11px] font-bold">
                       <th className="pb-3">Bank Partner</th>
