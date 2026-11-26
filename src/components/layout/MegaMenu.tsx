@@ -2,13 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import {
-  Compass,
-  CheckCircle2,
-  ArrowUpRight,
-  PhoneCall,
-  ShieldCheck,
-} from "lucide-react";
+import { PhoneCall } from "lucide-react";
 import { useCityStore } from "@/store/useCityStore";
 import { cn } from "@/lib/utils";
 
@@ -349,54 +343,6 @@ export function MegaMenu({ initialCategory = "buy", onClose }: MegaMenuProps) {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-
-        {/* Right Column: Signature 99acres-Style Insights Promo Card */}
-        <div className="w-full md:w-[280px] p-5 bg-gradient-to-br from-blue-50/70 via-white to-slate-50 border-l border-slate-200/80 flex flex-col justify-between shrink-0">
-          <Link
-            href={subData.promoHref}
-            onClick={onClose}
-            className="group block p-4 rounded-2xl bg-white border border-blue-100 shadow-sm hover:shadow-md transition-all relative overflow-hidden"
-          >
-            {/* Top Badge & Title with Arrow */}
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-500 text-white shadow-sm">
-                  <Compass className="h-4 w-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-primary block">
-                    {subData.promoBadge}
-                  </span>
-                  <span className="font-heading font-extrabold text-base text-slate-900 group-hover:text-primary transition-colors">
-                    {subData.promoTitle}
-                  </span>
-                </div>
-              </div>
-              <ArrowUpRight className="h-4 w-4 text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </div>
-
-            {/* Checklist bullets matching user image */}
-            <ul className="space-y-2 text-xs text-slate-600 font-medium">
-              {subData.promoBullets.map((bullet) => (
-                <li key={bullet} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-blue-500 shrink-0" />
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-primary">
-              <span>Explore Now</span>
-              <span className="text-xs">&rarr;</span>
-            </div>
-          </Link>
-
-          {/* Micro trust guarantee */}
-          <div className="pt-3 px-1 flex items-center gap-2 text-[11px] text-slate-500">
-            <ShieldCheck className="h-4 w-4 text-emerald-600 shrink-0" />
-            <span>100% Verified Real Estate Data</span>
           </div>
         </div>
       </div>

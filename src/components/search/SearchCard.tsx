@@ -11,14 +11,14 @@ import { QuickFilterChips } from "./QuickFilterChips";
 import { Button } from "@/components/ui/button";
 import { CustomSelect } from "@/components/ui/custom-select";
 import { PROPERTY_TYPE_OPTIONS } from "@/constants/filters";
+import { INDIAN_STATES } from "@/constants/indianStates";
 import { useSearchStore } from "@/store/useSearchStore";
 import { useCityStore } from "@/store/useCityStore";
-import mockCities from "@/mocks/cities.json";
 
-const CITY_OPTIONS = mockCities.map((c) => ({
-  label: c.name,
-  value: c.slug,
-  sublabel: `${c.propertyCount.toLocaleString("en-IN")}+ listings`,
+const CITY_OPTIONS = INDIAN_STATES.map((s) => ({
+  label: s.name,
+  value: s.slug,
+  sublabel: `${s.hubCity} • ${s.propertyCount.toLocaleString("en-IN")}+ listings`,
 }));
 
 const PROPERTY_TYPE_SELECT_OPTIONS = PROPERTY_TYPE_OPTIONS.map((item) => ({
@@ -42,7 +42,7 @@ export function SearchCard() {
 
   const handleCitySelect = (selectedSlug: string) => {
     setCity(selectedSlug);
-    const found = mockCities.find((c) => c.slug === selectedSlug);
+    const found = INDIAN_STATES.find((s) => s.slug === selectedSlug);
     if (found) {
       setSelectedCity(found.name, found.slug);
     }
@@ -73,16 +73,16 @@ export function SearchCard() {
       <form onSubmit={handleSearchSubmit} className="pt-4 space-y-4">
         {/* Row 1: City, Locality, Property Type, Budget */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3.5">
-          {/* Smooth City Dropdown */}
+          {/* Smooth State Dropdown */}
           <div className="flex flex-col gap-1.5 lg:col-span-2">
             <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
-              City
+              State
             </label>
             <CustomSelect
               options={CITY_OPTIONS}
               value={city}
               onChange={(val) => handleCitySelect(String(val))}
-              placeholder="Select City"
+              placeholder="Select State"
               icon={<MapPin className="h-4 w-4 text-primary" />}
               className="h-12 bg-slate-50 hover:bg-white border-slate-200 rounded-xl"
             />

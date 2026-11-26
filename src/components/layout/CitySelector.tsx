@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import { MapPin, ChevronDown, Check, Search } from "lucide-react";
 import { useCityStore } from "@/store/useCityStore";
 import { useSearchStore } from "@/store/useSearchStore";
-import mockCities from "@/mocks/cities.json";
+import { INDIAN_STATES } from "@/constants/indianStates";
 import { cn } from "@/lib/utils";
 
 export function CitySelector() {
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [searchFilter, setSearchFilter] = useState("");
   const { selectedCity, selectedCitySlug, setSelectedCity } = useCityStore();
@@ -49,12 +51,17 @@ export function CitySelector() {
     setCity(city.slug);
     setOpen(false);
     setSearchFilter("");
+    router.push(`/buy?state=${encodeURIComponent(city.name)}`);
   };
 
   const filteredCities = useMemo(() => {
     const q = searchFilter.trim().toLowerCase();
-    if (!q) return mockCities;
-    return mockCities.filter((c) => c.name.toLowerCase().includes(q));
+    if (!q) return INDIAN_STATES;
+    return INDIAN_STATES.filter(
+      (s) =>
+        s.name.toLowerCase().includes(q) ||
+        s.hubCity.toLowerCase().includes(q)
+    );
   }, [searchFilter]);
 
   return (
@@ -89,10 +96,10 @@ export function CitySelector() {
           <div className="px-2 pb-2 mb-2 border-b border-border/70">
             <div className="flex items-center justify-between mb-1.5">
               <span className="text-[11px] font-bold text-muted uppercase tracking-wider">
-                Select City
+                Select State / UT
               </span>
               <span className="text-[10px] text-primary font-medium">
-                8 Metros
+                36 States &amp; UTs
               </span>
             </div>
 
@@ -104,8 +111,8 @@ export function CitySelector() {
                 autoFocus
                 value={searchFilter}
                 onChange={(e) => setSearchFilter(e.target.value)}
-                placeholder="Search city..."
-                className="w-full pl-8 pr-2.5 py-1.5 text-xs rounded-lg border border-border bg-tint/40 focus:bg-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-ink placeholder:text-muted/70 transition-all"
+                placeholder="Search state or city..."
+                className="w-full pl-8 pr-2.5 py-1.5 text-xs rounded-lg border border-border bg-tint/40 focus:bg-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-ink placeholder:text-muted/70 transition-colors"
               />
             </div>
           </div>
@@ -113,16 +120,16 @@ export function CitySelector() {
           <div className="space-y-0.5 max-h-56 overflow-y-auto custom-scrollbar">
             {filteredCities.length === 0 ? (
               <div className="py-4 text-center text-xs text-muted">
-                No city matching &quot;{searchFilter}&quot;
+                No state matching &quot;{searchFilter}&quot;
               </div>
             ) : (
-              filteredCities.map((city) => {
-                const isSelected = selectedCitySlug === city.slug;
+              filteredCities.map((stateItem) => {
+                const isSelected = selectedCitySlug === stateItem.slug;
                 return (
                   <button
-                    key={city.slug}
+                    key={stateItem.slug}
                     type="button"
-                    onClick={() => handleSelectCity(city)}
+                    onClick={() => handleSelectCity(stateItem)}
                     className={cn(
                       "flex w-full items-center justify-between px-2.5 py-2 rounded-lg text-xs font-medium transition-colors text-left",
                       isSelected
@@ -131,9 +138,9 @@ export function CitySelector() {
                     )}
                   >
                     <div className="flex flex-col">
-                      <span>{city.name}</span>
+                      <span>{stateItem.name}</span>
                       <span className="text-[10px] text-muted font-normal">
-                        {city.propertyCount.toLocaleString("en-IN")}+ listings
+                        {stateItem.hubCity} • {stateItem.propertyCount.toLocaleString("en-IN")}+ listings
                       </span>
                     </div>
                     {isSelected && <Check className="h-4 w-4 text-primary shrink-0" />}

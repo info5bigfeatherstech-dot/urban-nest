@@ -1,17 +1,30 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { BrandLogo } from "@/components/common/BrandLogo";
-import {
-  FOOTER_COLUMNS,
-  SEO_CITY_LINKS,
-} from "@/constants/navigation";
+import { FOOTER_COLUMNS } from "@/constants/navigation";
 import {
   ShieldCheck,
   Mail,
   Phone,
+  Search,
+  ArrowRight,
 } from "lucide-react";
 
 export function Footer() {
+  const router = useRouter();
+  const [stateQuery, setStateQuery] = useState("");
+
+  const handleStateSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = stateQuery.trim();
+    if (!trimmed) return;
+    router.push(`/buy?state=${encodeURIComponent(trimmed)}`);
+    setStateQuery("");
+  };
+
   return (
     <footer className="bg-dark text-white border-t border-[#1E293B] pt-16 pb-12">
       <div className="container space-y-12">
@@ -131,23 +144,34 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Row 3: Properties in Popular Cities (SEO link blocks) */}
+        {/* Row 3: Search Properties by State */}
         <div className="pt-6 border-t border-white/10 space-y-3">
           <h4 className="font-heading text-xs font-bold uppercase tracking-wider text-white/80">
-            Properties in Popular Indian Cities
+            Find Properties by State
           </h4>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs">
-            {SEO_CITY_LINKS.map((city) => (
-              <Link
-                key={city.name}
-                href={city.href}
-                className="text-white/60 hover:text-accent transition-colors"
-              >
-                <span>{city.name}</span>{" "}
-                <span className="text-[11px] text-white/40">({city.count})</span>
-              </Link>
-            ))}
-          </div>
+          <form
+            onSubmit={handleStateSubmit}
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 max-w-md"
+          >
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40 pointer-events-none" />
+              <input
+                type="text"
+                value={stateQuery}
+                onChange={(e) => setStateQuery(e.target.value)}
+                placeholder="Enter state (e.g. Maharashtra, Karnataka)..."
+                aria-label="Search properties by state"
+                className="w-full h-10 pl-9 pr-3 rounded-lg bg-white/10 border border-white/15 text-xs sm:text-sm text-white placeholder:text-white/45 focus:outline-none focus:border-accent focus:bg-white/15 transition-colors"
+              />
+            </div>
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center gap-1.5 h-10 px-4 rounded-lg bg-accent hover:bg-accent-hover text-ink font-semibold text-xs sm:text-sm transition-colors shrink-0"
+            >
+              <span>View Properties</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </button>
+          </form>
         </div>
 
         {/* Row 4: Copyright and Disclaimer */}

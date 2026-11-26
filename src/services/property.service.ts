@@ -8,7 +8,12 @@ export const propertyService = {
     if (isMockEnabled()) {
       let list = mockProperties as Property[];
       if (city && city !== "all") {
-        list = list.filter((p) => p.city.toLowerCase().includes(city.toLowerCase()));
+        const normalized = city.replace(/-/g, " ").toLowerCase();
+        list = list.filter(
+          (p) =>
+            p.city.toLowerCase().includes(normalized) ||
+            p.state.toLowerCase().includes(normalized)
+        );
       }
       return delayMock(list.length > 0 ? list : (mockProperties as Property[]));
     }

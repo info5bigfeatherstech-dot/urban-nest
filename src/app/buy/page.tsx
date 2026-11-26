@@ -1,24 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Home, Search } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { ArrowLeft, Home, Search, X } from "lucide-react";
 import { PropertyCard } from "@/components/cards/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { CustomSelect } from "@/components/ui/custom-select";
 import { Property } from "@/types/property";
 import mockProperties from "@/mocks/properties.json";
-import mockCities from "@/mocks/cities.json";
 
-export default function BuyPage() {
-  const [selectedCity, setSelectedCity] = useState("all");
+function BuyPageContent() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const stateParam = searchParams.get("state") || "";
+
+  const [selectedState, setSelectedState] = useState(stateParam);
   const [bhk, setBhk] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const cityOptions = [
-    { label: "All Metros", value: "all" },
-    ...mockCities.map((c) => ({ label: c.name, value: c.slug })),
-  ];
+  useEffect(() => {
+    setSelectedState(stateParam);
+  }, [stateParam]);
 
   const bhkOptions = [
     { label: "All Configurations", value: "all" },
@@ -31,12 +34,13 @@ export default function BuyPage() {
   const propertiesList = mockProperties as Property[];
 
   const filtered = propertiesList.filter((p) => {
-    if (selectedCity !== "all" && !p.city.toLowerCase().includes(selectedCity.toLowerCase())) return false;
+    if (selectedState && !p.state.toLowerCase().includes(selectedState.toLowerCase())) return false;
     if (bhk !== "all" && p.bhk.toString() !== bhk) return false;
     if (
       searchQuery &&
       !p.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
-      !p.locality.toLowerCase().includes(searchQuery.toLowerCase())
+      !p.locality.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      !p.state.toLowerCase().includes(searchQuery.toLowerCase())
     )
       return false;
     return true;
@@ -78,7 +82,7 @@ export default function BuyPage() {
           </div>
 
           {/* Filters Bar */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 mt-6 pt-6 border-t border-slate-100">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6 pt-6 border-t border-slate-100">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
               <input
@@ -89,14 +93,6 @@ export default function BuyPage() {
                 className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:border-primary text-slate-900"
               />
             </div>
-
-            <CustomSelect
-              options={cityOptions}
-              value={selectedCity}
-              onChange={(val) => setSelectedCity(String(val))}
-              placeholder="City"
-              className="h-10 text-xs sm:text-sm"
-            />
 
             <CustomSelect
               options={bhkOptions}
@@ -110,9 +106,10 @@ export default function BuyPage() {
               variant="outline"
               size="sm"
               onClick={() => {
-                setSelectedCity("all");
+                setSelectedState("");
                 setBhk("all");
                 setSearchQuery("");
+                if (stateParam) router.replace("/buy");
               }}
               className="h-10 text-xs font-semibold text-slate-600"
             >
@@ -123,10 +120,23 @@ export default function BuyPage() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
           <span className="text-sm font-bold text-slate-700">
             Showing <span className="text-primary">{filtered.length}</span> Ready Properties
           </span>
+          {selectedState && (
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedState("");
+                router.replace("/buy");
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-primary border border-blue-200 text-xs font-semibold hover:bg-blue-100 transition-colors"
+            >
+              <span>State: {selectedState}</span>
+              <X className="h-3.5 w-3.5" />
+            </button>
+          )}
         </div>
 
         {filtered.length === 0 ? (
@@ -146,5 +156,13 @@ export default function BuyPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function BuyPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-16 text-center text-sm text-slate-500">Loading properties...</div>}>
+      <BuyPageContent />
+    </Suspense>
   );
 }
